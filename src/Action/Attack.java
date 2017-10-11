@@ -15,14 +15,13 @@ public class Attack implements Actions{
 		return "Attack";
 	}
 
-	public void act(Room room,Player player) {
-		Monster m = room.startChose("What Monster would you attack?", "Monster");
+	public void act(Room room,Player player, int i) {
+		Monster m = room.getMonster(i);
 		m.domage(player.getStrength());
-		if (m.isDead()) {
-			room.removeMonster(m);
-			System.out.println("This monster is dead");
-		}else {
+		if (!m.isDead()) {
 			player.domage(m.getStrength());
+		}else {
+			player.addGold(m.getgold());
 		}
 	}
 }

@@ -1,4 +1,4 @@
-package Play;
+package Divers;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -15,8 +15,8 @@ public class ScannerInt {
 	 */
 	public static int readInt(int n) {
 		int input = -1;
-		while (input <= 0 || input >= n) {
-			System.out.print("your choice (1-" + (n - 1) + ") ? ");
+		while (input < 0 || input >= n) {
+			System.out.print("your choice (0-" + (n - 1) + ") ? ");
 			try {
 				input = scanner.nextInt();
 			} catch (InputMismatchException	 e){
@@ -25,6 +25,13 @@ public class ScannerInt {
 			}
 		} 
 		return input;
+	}
+
+	
+	public static void main(String[] args) {
+		System.out.print("Enter an int from 0 to 5 : ");
+		int j = ScannerInt.readInt(6);
+		System.out.println("you typed : " + j);
 	}
 
 }

@@ -18,4 +18,15 @@ public class Monster extends Character{
 		super(hp, strength, gold,currentRoom);
 		id++;
 	}
+	public String image() {
+		return "ressources/Fantome.png";
+	}
+	
+	public int[] tailleImage() {
+		return new int[]{141,200};
+	}
+	
+	public String toString() {
+		return "Monster "+id+" = PV: "+hp;
+	}
 }

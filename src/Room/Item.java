@@ -24,4 +24,12 @@ public abstract class Item {
 	public String toString() {
 		return name;
 	}
+	
+	public String image() {
+		return "ressources/coffre.png";
+	}
+	
+	public int[] tailleImage() {
+		return new int[]{68,50};
+	}
 }

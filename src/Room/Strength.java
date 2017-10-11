@@ -19,7 +19,6 @@ public class Strength  extends Item{
 			System.out.println("This strength's potion is empty");
 		}
 		else {
-			System.out.println("You gained "+qqt+" Strength");
 			player.addStrength(qqt);
 			qqt=0;
 		}

@@ -16,7 +16,7 @@ public interface Actions {
 	 * @param room 
 	 * @param player
 	 */
-	public void act(Room room, Player player);
+	public void act(Room room, Player player,int i);
 	
 	public String toString();
 	

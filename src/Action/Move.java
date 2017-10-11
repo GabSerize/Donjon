@@ -15,8 +15,8 @@ public class Move implements Actions{
 		return "Move";
 	}
 
-	public void act(Room room, Player player) {
-		Direction d = room.startChose("Where do you want to go?", "Direction");
+	public void act(Room room, Player player,int i) {
+		Direction d = room.getDirection(i);
 		player.move(d);
 	}
 	

@@ -8,7 +8,7 @@ import Room.Room;
  *
  */
 public abstract class Character {
-	private int hp, strength, gold;
+	protected int hp, strength, gold;
 	private Room currentRoom;
 	
 	/**
@@ -37,6 +37,18 @@ public abstract class Character {
 		this.hp=hp;
 		this.strength=strength;
 		this.gold=gold;
+	}
+	
+	public int gethp() {
+		return hp;
+	}
+	
+	public int getgold() {
+		return gold;
+	}
+	
+	public int getstren() {
+		return strength;
 	}
 	
 	public void setCurrentRoom(Room room) {
@@ -69,9 +81,5 @@ public abstract class Character {
 	
 	public int getStrength() {
 		return strength;
-	}
-	
-	public String toString() {
-		return (this instanceof Player? "You": "A Monster") +" have : "+gold+" gold/ "+hp+" life point/ "+strength+" strength.";
 	}
 }

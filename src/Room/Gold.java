@@ -19,7 +19,6 @@ public class Gold extends Item{
 			System.out.println("This purse is empty");
 		}
 		else {
-			System.out.println("You gained "+qqt+" gold");
 			player.addGold(qqt);
 			qqt=0;
 		}

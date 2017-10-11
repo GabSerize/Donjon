@@ -19,7 +19,6 @@ public class Health extends Item{
 			System.out.println("This health's potion is empty");
 		}
 		else {
-			System.out.println("You gained "+qqt+" life point");
 			player.heal(qqt);
 			qqt=0;
 		}

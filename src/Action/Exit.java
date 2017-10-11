@@ -14,7 +14,7 @@ public class Exit implements Actions{
 		return "Exit";
 	}
 
-	public void act(Room room, Player player) {
+	public void act(Room room, Player player,int i) {
 		player.exit();
 		System.out.println("You Win");
 	}

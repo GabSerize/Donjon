@@ -32,19 +32,6 @@ public class AdventureGame
 		player=p;
 	}
 	
-	/**
-	 * play a game
-	 * @param player
-	 */
-	public void play (Player player) {
-		this.player=player;
-		player.setCurrentRoom(currentRoom);
-		while(!ifFinished()) {
-			player.act();
-		}
-		System.out.println("Game Over");
-	}
-	
 	public void addMonster(Monster monster, Room room) {
 		room.addMonster(monster);
 		monster.setCurrentRoom(room);

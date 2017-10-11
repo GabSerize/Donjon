@@ -16,9 +16,9 @@ public class Take implements Actions{
 		return "Take";
 	}
 
-	public void act(Room room, Player player) {
-		Item i = room.startChose("What Item would you take?", "Item");
-		i.effect(player);
+	public void act(Room room, Player player,int i) {
+		Item item = room.getItem(i);
+		item.effect(player);
 	}
 	
 }
