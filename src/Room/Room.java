@@ -46,7 +46,7 @@ public class Room {
 	}
 	
 	public Item getItem(int i) {
-		return listItem.isEmpty()? null: listItem.get(i);
+		return listItem.isEmpty()? null: listItem.size()>=i? null: listItem.get(i);
 	}
 
 	public void addMonster(Monster monster) {
@@ -61,8 +61,9 @@ public class Room {
 	}
 	
 	public Monster getMonster(int i) {
-		return listMonster.isEmpty()? null :listMonster.get(i);
+		return listMonster.isEmpty()? null : listMonster.size()>=i? null :listMonster.get(i);
 	}
+
 	
 	public void addDirection(Direction direction) {
 		listDirection.add(direction);
